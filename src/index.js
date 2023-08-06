@@ -19,18 +19,18 @@ app.use('/api', apiRoutes);
 app.listen(ServerConfig.PORT, async () => {
   console.log(`Successfully started the sever on PORT : ${ServerConfig.PORT}`);
 
-  try {
-    const response = await mailsender.sendMail({
-      from: ServerConfig.GMAIL_EMAIL,
-      to: 'floydencomputer@gmail.com',
-      subject: 'Is the service working',
-      text: 'YES IT IS WORKING'
-    });
+  // try {
+  //   const response = await mailsender.sendMail({
+  //     from: ServerConfig.GMAIL_EMAIL,
+  //     to: 'floydencomputer@gmail.com',
+  //     subject: 'Is the service working',
+  //     text: 'YES IT IS WORKING'
+  //   });
 
-    console.log(response);
-  } catch (error) {
-    console.log(error);
-  }
+  //   console.log(response);
+  // } catch (error) {
+  //   console.log(error);
+  // }
 });
 
 // cmd "/C TASKKILL /IM node.exe /F"

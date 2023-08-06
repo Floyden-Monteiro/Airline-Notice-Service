@@ -1,8 +1,10 @@
 const express = require('express');
 
 const router = express.Router();
-const { infoController} = require("../../controllers")
+const { infoController, EmailController } = require('../../controllers');
 
 router.get('/info', infoController);
 
-module.exports= router;
+router.post('/tickets', EmailController.create);
+
+module.exports = router;
